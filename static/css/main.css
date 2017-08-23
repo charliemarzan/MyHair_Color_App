@@ -1,0 +1,326 @@
+/* Text Elements */
+
+h1 {
+  color: #fff;
+  font-size: 45px;
+  font-family: 'Cagliostro', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+p.paragraph {
+  color: #fff;
+  font-weight: 100;
+  font-size: 19px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+p.paragraph.introduction-p {
+  text-transform: capitalize;
+  font-size: 22px;
+}
+
+a.link-text.dropdown-item {
+  color: #fff;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+}
+
+a.link-text.dropdown-item:hover {
+  background-color: transparent;
+  color: rgba(244, 210, 112, .82);
+}
+
+/* Interaction Elements */
+
+a.link-button.btn {
+  margin-top: 20px;
+  border-color: #fff;
+  color: #fff;
+  font-family: 'Cagliostro', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+a.link-button.btn.btn-lg.btn-outline-primary {
+  border-width: .125rem;
+  border-color: rgba(136, 82, 131, .93);
+  font-weight: 100;
+}
+
+a.link-button.btn-lg {
+  width: 200px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+a.link-button.btn:hover {
+  background-color: #885283;
+}
+
+/* Layout Elements */
+
+body > .row.footer-row {
+  background-color: #021533;
+}
+
+body > .row > [class*='col-xs-'].nav-column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display:    -moz-box;
+  display: -ms-flexbox;
+  display:         flex;
+  padding-top: 10px;
+}
+
+body > .row > [class*='col-xs-'].footer-column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display:    -moz-box;
+  display: -ms-flexbox;
+  display:         flex;
+  padding-top: 20px;
+
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+body > .row > [class*='col-xs-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+body > .row.header-row {
+  background-image: -webkit-linear-gradient(top, rgba(20, 6, 141, .04) 0%, rgba(7, 0, 73, 1) 100%), url('../images/alice-moore-192521.jpg');
+  background-image:    -moz-linear-gradient(top, rgba(20, 6, 141, .04) 0%, rgba(7, 0, 73, 1) 100%), url('../images/alice-moore-192521.jpg');
+  background-image:      -o-linear-gradient(top, rgba(20, 6, 141, .04) 0%, rgba(7, 0, 73, 1) 100%), url('../images/alice-moore-192521.jpg');
+  background-image:         linear-gradient(180deg, rgba(20, 6, 141, .04) 0%, rgba(7, 0, 73, 1) 100%), url('../images/alice-moore-192521.jpg');
+  background-attachment: scroll, scroll;
+  background-position: left top, center top;
+  background-clip: border-box, border-box;
+  background-origin: padding-box, padding-box;
+  background-size: auto auto, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+
+body > .row > [class*='col-xs-'].column-1 {
+  padding-bottom: 30px;
+}
+
+.subgrid > .row > [class*='col-xs-'] {
+  margin-left: 0;
+}
+
+.subgrid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1400px;
+}
+
+.subgrid > .row > [class*='col-xs-'].subgrid-column-1 {
+  text-align: center;
+}
+
+.subgrid > .row > [class*='col-xs-'].subgrid-column-4 {
+  position: static;
+  max-height: 100px;
+  height: auto;
+  text-align: center;
+}
+
+.subgrid > .row.subgrid-row-8 {
+  max-height: none;
+  height: auto;
+}
+
+.subgrid > .row > [class*='col-xs-'].subgrid-column-3 {
+  height: 100%;
+}
+
+.subgrid > .row.subgrid-row-6 {
+  width: 100%;
+  height: 100%;
+}
+
+.rule hr {
+  border-top-width: 3px;
+  border-top-color: #fff;
+}
+
+.container-fluid.header-container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1000px;
+}
+
+.rule {
+  padding-bottom: 20px;
+  width: 90%;
+}
+
+.container-fluid {
+  padding: 15px;
+}
+
+.container-fluid.dropdown-menu {
+  background-color: transparent;
+}
+
+a.glyph.btn.btn-secondary {
+  color: #fff;
+  font-size: 22px;
+}
+
+a.glyph.btn.btn-secondary.dropdown-toggle {
+  border-color: rgba(204, 204, 204, .15);
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.container-fluid.dropdown-menu.dropdown-menu-right {
+  border-width: 0;
+  border-style: none;
+  border-radius: 0;
+}
+
+.container-fluid.nav-top-space {
+  padding-top: 0;
+}
+
+.container-fluid.btn-group.nav-container {
+  padding-bottom: 0;
+}
+
+.row > [class*='col-xs-'] .html-element.html-element-3 {
+  text-align: center;
+}
+
+.row > [class*='col-xs-'] .html-element.html-element-4 {
+  position: relative;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.row > [class*='col-xs-'] .html-element.html-element-5 {
+  max-height: 100px;
+}
+
+a.glyph.btn.btn-secondary.dropdown-toggle:hover {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 36rem) {
+  /* Text Elements */
+
+  a.link-text.dropdown-item {
+    font-size: 18px;
+  }
+
+  /* Layout Elements */
+
+  body > .row > [class*='col-xs-'].nav-column {
+    display: block;
+    background-color: rgba(46, 0, 0, .4);
+  }
+
+  body > .row.header-row {
+    width: 100%;
+    height: 100%;
+  }
+
+  .subgrid > .row {
+    padding-bottom: 40px;
+  }
+
+  .subgrid > .row.subgrid-row-3 {
+    padding-bottom: 0;
+  }
+
+  .subgrid > .row.subgrid-row-2 {
+    padding-bottom: 0;
+  }
+
+  .container-fluid.nav-container {
+    padding-top: 0;
+    max-width: 1200px;
+  }
+
+  a.glyph.btn.btn-secondary.dropdown-toggle {
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  .row > [class*='col-xs-'] .html-element.html-element-1 {
+    text-align: center;
+  }
+
+  .row > [class*='col-xs-'] .html-element.html-element-2 {
+    text-align: left;
+  }
+
+  a.glyph.btn.btn-secondary.dropdown-toggle:hover {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  /* Layout Elements */
+
+  body > .row > [class*='col-xs-'].nav-column {
+    background-color: rgba(49, 0, 0, .38);
+  }
+
+  body > .row > [class*='col-xs-'].column-1 {
+    position: relative;
+    padding-bottom: 20%;
+  }
+
+  .subgrid > .row.subgrid-row-1 {
+    padding-bottom: 0;
+  }
+
+  .subgrid > .row > [class*='col-xs-'].subgrid-column-2 {
+    text-align: center;
+  }
+
+  .subgrid > .row.subgrid-row-2 {
+    padding-bottom: 0;
+  }
+
+  .subgrid > .row.subgrid-row-3 {
+    text-align: center;
+  }
+
+  .subgrid > .row.subgrid-row-6 {
+    padding-bottom: 0;
+  }
+
+  .subgrid > .row.subgrid-row-7 {
+    padding-bottom: 0;
+  }
+
+  .container-fluid.header-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-top: 0;
+    padding-bottom: 100px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  /* Layout Elements */
+
+  body > .row > [class*='col-xs-'].footer-column {
+    padding-top: 11px;
+  }
+
+  .row > [class*='col-xs-'] .html-element.html-element-4 {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  /* Layout Elements */
+
+  .subgrid > .row {
+    padding-bottom: 50px;
+  }
+}

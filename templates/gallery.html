@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="generator" content="undefined">
+  <title>MyHair-From File</title>
+
+ {% extends 'layout.html' %}
+  </head>
+{% block body %}
+<body>
+  <header class="row header-row" id="home">
+    <div class="col-xs-12 nav-column">
+      <nav class="container-fluid btn-group nav-container"><a class="glyph btn btn-secondary dropdown-toggle" href="#" id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="coffeecup-icons-menu7"></i></a>
+        <nav class="container-fluid dropdown-menu dropdown-menu-right nav-top-space" aria-labelledby="dropdownmenulink">
+          <a class="link-text dropdown-item" href="index.html">Home</a>
+          <a class="link-text dropdown-item" href="camera.html">Camera<br>
+		  
+          </a>
+		  
+        </nav>
+      </nav>
+      <nav class="container-fluid btn-group nav-container">
+        <nav class="container-fluid dropdown-menu dropdown-menu-right nav-top-space" aria-labelledby="dropdownmenulink">
+          <a class="link-text dropdown-item" href="index.html">Home</a>
+          <a class="link-text dropdown-item" href="about.html">About</a>
+          <a class="link-text dropdown-item" href="services.html">Services</a>
+        </nav>
+      </nav>
+	  <p class="paragraph introduction-p" align="center">Please Upload your Picture</p>
+    </div>
+        
+    <div class="col-xs-12 column-1">
+      <div class="container-fluid">
+        <div class="subgrid">
+          <div class="row subgrid-row-2">
+            <div class="col-xs-12"></div>
+          </div>
+          <div class="row subgrid-row-6">
+            <div class="col-xs-12">
+              <div class="html-element html-element-1">
+			  <img src="" id="mirror" class="canvas__mirror" height=400 width=400 style="object-fit: contain"/>
+</div></div>
+<form id="upload-form" action="http://localhost:8080/upload" method="POST" enctype="multipart/form-data">
+            </div>
+            <div class="col-xs-12 subgrid-column-1">
+              <div class="html-element">
+			  
+			  <input type="file" name="file" id="file-1" class="link-button btn btn-outline-primary btn-lg" align="center" accept="image/*" onchange="loadFile(event)"/>
+
+		</script>
+		
+
+</div>
+            </div>
+          </div>
+          <div class="row subgrid-row-3">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-7"></div>
+            <div class="col-xs-6">
+              <div class="html-element"><img src="" id="mirror" class="canvas__mirror" style="height: 400;left: 0;position: absolute;top: 0;width: 400; "/></div>
+            </div>
+          </div>
+        </div>
+        <div class="subgrid">
+          <div class="row subgrid-row-7">
+            <div class="col-xs-1">
+              <p class="paragraph introduction-p">Palette:</p>
+            </div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+              <div class="html-element html-element-2">
+
+<div class="strip-content" id="demo-content">
+
+
+		<div id="demo-app">
+
+
+
+
+			<div class="panel bgcolor">
+				<table>
+					<tbody>
+					<tr>
+					<th>					
+					<span class="link-button btn btn-outline-primary btn-lg" href="about.html" id="bgcolor-button" >Choose Color</span>
+
+					</th>
+				<th>R</th><td><input id="bgcolor-red" name="R" class="short" size=3 onchange="setRGB('bgcolor', this.value, null, null)" /></td>
+				<th>G</th><td><input id="bgcolor-grn" name="G" class="short" size=3 onchange="setRGB('bgcolor', null, this.value, null)" /></td>
+				<th>B</th><td><input id="bgcolor-blu" name="B" class="short" size=3 onchange="setRGB('bgcolor', null, null, this.value)" /></td>
+</tr>
+
+				</tbody></table>
+			</div>
+<script>
+  var loadFile = function(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var mirror = document.getElementById('mirror');
+      mirror.src = reader.result;
+      var link = document.getElementById('btn-downloaddownload');
+        //get image link
+      link.href = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
+  var button = document.getElementById('btn-download');
+	button.addEventListener('click', function (e) {
+    var dataURL = canvas.toDataURL('image/jpg');
+    button.href = dataURL;
+});
+
+</script>
+
+
+			<script>
+			var options = {
+				valueElement: null,
+				width: 300,
+				height: 120,
+				sliderSize: 20,
+				position: 'top',
+				borderColor: '#CCC',
+				insetColor: '#CCC',
+				backgroundColor: '#202020'
+			};
+
+			var pickers = {};
+
+			pickers.bgcolor = new jscolor('bgcolor-button', options);
+			pickers.bgcolor.onFineChange = "update('bgcolor')";
+			pickers.bgcolor.fromString('AB2567');
+
+
+			function update (id) {
+				document.getElementById('bgcolor-button').style.backgroundColor =
+					pickers.bgcolor.toHEXString();
+
+				document.getElementById(id + '-red').value = Math.round(pickers[id].rgb[0]);
+				document.getElementById(id + '-grn').value = Math.round(pickers[id].rgb[1]);
+				document.getElementById(id + '-blu').value = Math.round(pickers[id].rgb[2]);
+			}
+
+
+			function setRGB (id, r, g, b) {
+				pickers[id].fromRGB(r, g, b);
+				update(id);
+			}
+
+			function setString (id, str) {
+				pickers[id].fromString(str);
+				update(id);
+			}
+
+			update('bgcolor');
+			update('fgcolor');
+			</script>
+		</div>
+
+
+	</div></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+              <div class="html-element">
+		</script>
+<!--a href="javascript: document.register.command.value='Add'; document.register.submit();" class="link-button btn btn-outline-primary btn-lg" id="btn">Apply Hair Color</a-->
+<input type="submit" value="Submit!" id="upload-button" >
+</form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <footer class="row footer-row">
+    <div class="col-xs-12 footer-column">
+      <footer class="container-fluid"></footer>
+    </div>
+  </footer>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+var target = $(this.hash);
+target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+if (target.length) {
+$('html,body').animate({
+scrollTop: target.offset().top
+}, 1000);
+return false;
+}
+}
+});
+});
+</script>
+<script type="text/javascript">
+</script>
+</body>
+{% endblock %}
+</html>

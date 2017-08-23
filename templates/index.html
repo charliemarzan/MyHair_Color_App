@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="generator" content="undefined">
+  <title>MyHair Color App</title>
+  <script>document.createElement( "picture" );</script>
+  <script src="{{url_for('static',filename='js/picturefill.min.js')}}" class="picturefill" async="async"></script>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/wireframe-theme.min.css')}}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cagliostro%7CQuicksand:300">
+</head>
+
+<body>
+  <header class="row header-row" id="home">
+    <div class="col-xs-12 nav-column">
+      <nav class="container-fluid btn-group nav-container"><a class="glyph btn btn-secondary dropdown-toggle" href="#" id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="coffeecup-icons-menu7"></i></a>
+        <nav class="container-fluid dropdown-menu dropdown-menu-right nav-top-space" aria-labelledby="dropdownmenulink">
+          <a class="link-text dropdown-item" href="index.html">Home</a>
+        </nav>
+      </nav>
+      <nav class="container-fluid btn-group nav-container">
+        <nav class="container-fluid dropdown-menu dropdown-menu-right nav-top-space" aria-labelledby="dropdownmenulink">
+          <a class="link-text dropdown-item" href="index.html">Home</a>
+          <a class="link-text dropdown-item" href="about.html">About</a>
+          <a class="link-text dropdown-item" href="services.html">Services</a>
+        </nav>
+      </nav>
+    </div>
+    <div class="col-xs-12 column-1">
+      <header class="container-fluid header-container">
+        <h1>MyHair Color</h1>
+        <div class="rule">
+          <hr>
+        </div>
+        <p class="paragraph introduction-p">This app automatically masks your hair and allows you to Try all possible colors in the palette</p>
+        <div class="subgrid">
+          <div class="row subgrid-row-1">
+            <div class="col-xs-12 subgrid-column-2"><a class="link-button btn btn-lg btn-outline-primary" href="/camera">Camera<br></a><a class="link-button btn btn-outline-primary btn-lg" href="/gallery">Choose From File</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </header>
+  <footer class="row footer-row">
+    <div class="col-xs-12 footer-column">
+      <footer class="container-fluid"></footer>
+    </div>
+  </footer>
+    <script src="{{url_for('static',filename='js/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/tether.min.js')}}"></script>
+  <script src="{{url_for('static',filename='js/outofview.js')}}"></script>
+
+  <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+var target = $(this.hash);
+target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+if (target.length) {
+$('html,body').animate({
+scrollTop: target.offset().top
+}, 1000);
+return false;
+}
+}
+});
+});
+</script>
+</body>
+
+</html>
